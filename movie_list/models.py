@@ -15,6 +15,7 @@ class Movie(models.Model):
     description = models.TextField(default="Description")
     rating = models.FloatField(default=0)
     number_of_votes = models.IntegerField(default=0)
+    actors_string = models.TextField(default='')
     cast = models.ManyToManyField(Actor)
     show_type = models.CharField(max_length=100, default='Movie')
     cover_image = models.ImageField(upload_to='images', default='no-image.jpg')

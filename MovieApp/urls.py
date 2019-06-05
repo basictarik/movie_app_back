@@ -8,5 +8,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^', include('movie_list.urls')),
     path('admin/', admin.site.urls),
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
